@@ -4,14 +4,14 @@
 #
 Name     : R-Iso
 Version  : 0.0.17
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/Iso_0.0-17.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Iso_0.0-17.tar.gz
 Summary  : Functions to Perform Isotonic Regression
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Iso-lib
-BuildRequires : clr-R-helpers
+Requires: R-Iso-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 
 %description
 isotonic regression; bivariate isotonic regression
@@ -33,11 +33,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523744088
+export SOURCE_DATE_EPOCH=1552772045
 
 %install
+export SOURCE_DATE_EPOCH=1552772045
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523744088
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library Iso|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  Iso || :
 
 
 %files
@@ -98,7 +97,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/Iso/help/paths.rds
 /usr/lib64/R/library/Iso/html/00Index.html
 /usr/lib64/R/library/Iso/html/R.css
-/usr/lib64/R/library/Iso/libs/symbols.rds
 /usr/lib64/R/library/Iso/makefor
 /usr/lib64/R/library/Iso/pava.r
 /usr/lib64/R/library/Iso/smooth.f.orig
