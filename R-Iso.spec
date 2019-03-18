@@ -4,7 +4,7 @@
 #
 Name     : R-Iso
 Version  : 0.0.17
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/Iso_0.0-17.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Iso_0.0-17.tar.gz
 Summary  : Functions to Perform Isotonic Regression
@@ -33,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552772045
+export SOURCE_DATE_EPOCH=1552925240
 
 %install
-export SOURCE_DATE_EPOCH=1552772045
+export SOURCE_DATE_EPOCH=1552925240
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
