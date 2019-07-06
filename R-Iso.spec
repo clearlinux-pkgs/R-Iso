@@ -4,7 +4,7 @@
 #
 Name     : R-Iso
 Version  : 0.0.18
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/Iso_0.0-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Iso_0.0-18.tar.gz
 Summary  : Functions to Perform Isotonic Regression
